@@ -263,7 +263,7 @@ EntryPoint:
     move.w #0x8F02, 0x00C00004          ; Set up auto-increment for every 2 bytes
     move.l #0x40000000, 0x00C00004      ; Write VRAM addr 0 to Control Port
     move.l #0x00000000, d0              ; Set d0 to 0
-    move.w #0x00007FFF, d1              ; Set d1 to 32k-1
+    move.l #0x00007FFF, d1              ; Set d1 to 32k-1
 
     @ClearVRAM:
     move.w d0, 0x00C00000           ; Clear VRAM
